@@ -1,117 +1,52 @@
-# Brutal - The neobrutalist Astro theme
+# Blogster
 
-Brutal is a minimal neobrutalist theme for [Astro](https://astro.build/). It's based on Neobrutalist Web Design, a movement that aims to create websites with a minimalistic and functional design. It has some integrations like Image Optimization, RSS, Sitemap, ready to get your SEO done right.
+Theme: **minimal**
 
-The theme has no JavaScript integration out of the box, but can always be added of course.
+Blogster is a collection of beautiful, accessible and performant blog templates built with [Astro](https://astro.build) and [Markdoc](https://markdoc.dev).
 
-This template is based on [my own personal website](<https://www.elian.codes/>), with some more generic things added.
+Check out the demo here - [Blogster minimal template](https://blogster-minimal.netlify.app).
 
-## Usage
+## Minimal Template
 
-You can bootstrap a new Astro project using Brutal with the following command:
+A light weight theme built with plain old HTML and CSS. No external fonts or icons. Zero JavaScript. You get a full functional nice looking blog that loads super fast.
 
-```bash
-# npm 6.x
-npx create astro@latest --template eliancodes/brutal
+- **Lean**. No external fonts or icons. Zero JavaScript. Zero Runtime. Only ~6kB.
+- **Fast**. Fast by default. Astro websites are engineered to be fast and load before you could blink, even when not cached.
+- **Dark mode**. All themes have light/dark mode built-in.
+- **Mobile first**. Responsive and loads fast in all devices.
+- **Accessible**. A well thought out semantic and accessible content.
+- **Perfect lighthouse score.** 100 across the board.
+- **Easy content authoring**. Author content using markdown (`.md`) from your code editor or directly in GitHub.
+- **Extended markdown with [Markdoc](https://markdoc.dev).** Type-safe custom components like YouTube embed, Twitter embed (or anything you want really) in your markdown (`.md`) files.
+- **RSS feed**. Your blog has an RSS feed setup that can be accessed at `/rss.xml`.
+- **SEO**. All pages are setup with all the SEO you might need.
 
-# npm 7+
-npx create astro@latest -- --template eliancodes/brutal
+## How do I add content?
 
-# pnpm
-pnpm dlx create-astro --template eliancodes/brutal
+All the content is written in markdown (.md) and grouped as `blog` or `projects` in the `content` directory. All the default markdown syntax will work. You also have a few example custom markdown elements like _YouTube embed_, _Twitter embed_, etc. You can create your own custom components too in two easy steps.
 
-# yarn
-yarn create astro --template eliancodes/brutal
-```
+1. Add a markdoc config. Check out the markdoc config in [src/lib/markdoc/config.ts](src/lib/markdoc/config.ts) to learn how to add custom components.
+2. Add a component to render your custom component. Check out the Renderer in [src/components/Renderer.astro](src/components/Renderer.astro).
 
-### Commands
+## How do I make it my blog?
 
-All commands are run from the root of the project, from a terminal:
+Easy.
 
-(Here I use PNPM, no problem if you use NPM or Yarn)
+- All content is static and everything is straight forward. Change whatever you need to change.
+- Delete or update the content in `content/{content-group}`. `content-group` could be `blog`, `projects` or `anything`.
+- (Optional) If you need more content types like _Notes_, just create a new dir in `content` and add a new frontmatter validator like [src/lib/markdoc/blog/frontmatter](src/lib/markdoc/blog/frontmatter).
 
-| Command             | Action                                             |
-| :------------------ | :------------------------------------------------- |
-| `pnpm install`      | Installs dependencies                              |
-| `pnpm dev`          | Starts local dev server at `localhost:3000`        |
-| `pnpm build`        | Build your production site to `./dist/`            |
-| `pnpm preview`      | Preview your build locally, before deploying       |
-| `pnpm astro ...`    | Run CLI commands like `astro add`, `astro preview` |
-| `pnpm astro --help` | Get help using the Astro CLI                       |
+## How do I deploy?
 
-## Integrations
+`yarn build` will generate a static website in `dist` dir. You can host it with any static hosting. If you need a recommendation, check out [Netlify](netlify.com).
 
-### UnoCSS
+## Credit
 
-In this theme, I'm using [UnoCSS](https://uno.antfu.me/) to generate the CSS. It's a utility-first CSS framework that uses a single class to style elements. It's very easy to use and has a lot of features. It's setup to be completely compatible with TailwindCSS, with the advantage of being able to use PureCSS icons. You can always switch out UnoCSS for TailwindCSS if you want to, without breaking the general styles.
+Thanks to other templates that inspired this theme.
 
-### Sitemap
+- [Official Astro Blog template](https://github.com/withastro/astro/tree/main/examples/blog)
+- [Bear Blog](https://github.com/HermanMartinus/bearblog/).
 
-To generate the sitemap, you don't need to do anything. It's automatically generated when you build your site. You'll just need to switch out the `site` on `astro.config.mjs` to your own.
+## License
 
-```js title="astro.config.mjs"
-import { defineConfig } from 'astro/config';
-
-export default defineConfig({
-  site: 'https://example.com',
-});
-```
-
-### RSS
-
-The RSS feed is automatically generated from the Markdown files in the `src/content/blog` folder. You can ofcourse completely change this to your own needs.
-
-The RSS will output to `https://example.com/feed.xml` by default. You can change this, by renaming `src/pages/feed.xml.js`.
-
-### Image
-
-## Components
-
-### `components/blog/`
-
-This directory contains all components for the blog.
-
-### `components/errors/`
-
-This directory contains all error components.
-
-#### `components/errors/404.astro`
-
-This component is used when a page is not found.
-
-### `components/generic/`
-
-This directory contains all generic components, reused over multiple pages.
-
-### `components/home/`
-
-This directory contains all components for the home page.
-
-### `components/layout/`
-
-This directory contains all layout components. For instance, the header and footer and `<head>` section.
-
-### Colors
-
-The theme has a few colors that you can use in the included components.
-
-- red
-- blue
-- green
-- yellow
-- pink
-- purple
-- orange
-- teal
-- cyan
-- lime
-- emerald
-- fuchsia
-- violet
-- rose
-- sky
-- amber
-
-More colors can be added in `astro.config.mjs` in the `colors` array.
-
-If you need more from this theme, don't hesitate to open an issue or reach out to me!
+MIT © [Dinesh Pandiyan](https://github.com/flexdinesh)
