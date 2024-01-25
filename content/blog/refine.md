@@ -47,6 +47,6 @@ Cet extrait de code démontre la simplicité avec laquelle vous pouvez lancer un
 
 ### Conclusion
 
-refine est une bibliothèque puissante pour les développeurs React qui cherchent à créer rapidement et efficacement des panneaux d'administration sans renoncer à la personnalisation et à la flexibilité. Pour plus de détails, consultez la [documentation](https://github.com/refinedev/refine) et commencez à affiner vos panneaux d'administration dès aujourd'hui.
+refine est une bibliothèque puissante pour les développeurs React qui cherchent à créer rapidement et efficacement des panneaux d'administration sans renoncer à la personnalisation et à la flexibilité. Pour plus de détails, consultez la [documentation](https://github.com/refinedev/refine/tree/master/documentation) et commencez à affiner vos panneaux d'administration dès aujourd'hui.
 
 Pour plus d'informations, rendez-vous sur le [dépôt GitHub](https://github.com/refinedev/refine).
